@@ -6,6 +6,7 @@ const config = {
   overrides: [
     {
       extends: [
+        "plugin:@typescript-eslint/recommended",
         "plugin:@typescript-eslint/recommended-requiring-type-checking",
       ],
       files: ["*.ts", "*.tsx"],
@@ -29,6 +30,9 @@ const config = {
       },
     ],
     "@typescript-eslint/no-unused-vars": ["warn", { argsIgnorePattern: "^_" }],
+    "no-unused-vars": ["error", { "vars": "all", "args": "after-used", "ignoreRestSiblings": false }],
+    "@typescript-eslint/no-unsafe-return": "error",
+    "@typescript-eslint/no-explicit-any": "error"
   },
 };
 

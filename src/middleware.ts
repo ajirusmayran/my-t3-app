@@ -8,7 +8,7 @@ import { NextResponse } from "next/server";
 
 export default authMiddleware();
 
-// Stop Middleware running on static files 
+// Stop Middleware running on static files
 export const config = {
-    matcher: ["/((?!.*\\..*|_next).*)", "/", "/(api|trpc)(.*)"],
+  matcher: ["/((?!.*\\..*|_next).*)", "/", "/(api|trpc)(.*)"],
 };
